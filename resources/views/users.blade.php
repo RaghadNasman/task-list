@@ -10,7 +10,7 @@
                 </div>
                 <div class="card-body">
                     <!-- Update User Form -->
-                    <form action="{{url('update')}}" method="POST">
+                    <form action="{{url('updateUser')}}" method="POST">
                         @csrf
                         <input type="hidden" value="{{$user->id}}" name="id">
                         <!-- User Name -->
@@ -43,7 +43,7 @@
                 </div>
                 <div class="card-body">
                     <!-- New User Form -->
-                    <form action="create" method="POST">
+                    <form action="createUser" method="POST">
                         @csrf
                         <!-- User Name -->
                         <div class="mb-3">
@@ -90,13 +90,13 @@
                             <tr>
                                 <td>{{$user -> name}}</td>
                                 <td>
-                                    <form action="/delete/{{$user->id}}" method="POST" class="d-inline">
+                                    <form action="/deleteUser/{{$user->id}}" method="POST" class="d-inline">
                                         @csrf
                                         <button type="submit" class="btn btn-danger">
                                             <i class="fa fa-trash me-2"></i>Delete
                                         </button>
                                     </form>
-                                    <form action="/edit/{{$user->id}}" method="POST" class="d-inline">
+                                    <form action="/editUser/{{$user->id}}" method="POST" class="d-inline">
                                         @csrf
                                         <button type="submit" class="btn btn-info">
                                             <i class="fa fa-info me-2"></i>Edit

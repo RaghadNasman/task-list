@@ -75,13 +75,13 @@ Route::post('update', [TaskController::class, 'update']);
 
 // display layaout
 Route::get('app', function () {
-    return view ('layouts.app');
+    return view('layouts.app');
 });
 
 // user Routes
 Route::get('users', [UserController::class, 'index']);
-Route::post('create', [UserController::class, 'create']);
-Route::post('delete/{id}', [UserController::class, 'destroy']);
-Route::post('edit/{id}', [UserController::class, 'edit']);
-Route::post('update', [UserController::class, 'update']);
+Route::post('createUser', [UserController::class, 'createUser']);
+Route::post('deleteUser/{id}', [UserController::class, 'destroyUser']);
+Route::post('editUser/{id}', [UserController::class, 'editUser']);
+Route::post('updateUser', [UserController::class, 'updateUser']);
 
